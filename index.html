@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivo Patrimonial Pedroso - La Rioja</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f6f6f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        header {
+            background: #8B4513;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.9; font-style: italic; }
+        nav {
+            background: #6B3410;
+            padding: 1rem 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 2rem;
+            opacity: 0.9;
+        }
+        nav a:hover { opacity: 1; text-decoration: underline; }
+        main {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .sidebar {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            height: fit-content;
+            border: 1px solid #e0e0e0;
+        }
+        .sidebar h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #8B4513;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 0.6rem; }
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar a:hover { color: #8B4513; text-decoration: underline; }
+        .infobox {
+            background: #fff8dc;
+            border: 1px solid #deb887;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .infobox h4 {
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .infobox p { font-size: 0.9rem; margin-bottom: 0.3rem; }
+        .content h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #deb887;
+        }
+        .content h3 {
+            color: #6B3410;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .highlight-box {
+            background: #fff8dc;
+            border-left: 4px solid #8B4513;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .person-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .person-card h4 {
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+        }
+        .person-card .dates {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        .section-list {
+            list-style: none;
+        }
+        .section-list li {
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+        .section-list li:last-child { border-bottom: none; }
+        .section-list a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .section-list a:hover { color: #8B4513; }
+        footer {
+            background: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            main { grid-template-columns: 1fr; }
+            nav a { display: block; margin-bottom: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ Archivo Patrimonial Pedroso</h1>
+            <p>La Rioja, España — Historia, patrimonio y memoria documental</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia</a>
+            <a href="patrimonio.html">Patrimonio</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="documentos.html">Documentos</a>
+            <a href="genealogia.html">Genealogía</a>
+        </nav>
+        
+        <main>
+            <aside class="sidebar">
+                <div class="infobox">
+                    <h4>📍 Pedroso</h4>
+                    <p><strong>Comunidad:</strong> La Rioja</p>
+                    <p><strong>Comarca:</strong> Logroño</p>
+                    <p><strong>Altitud:</strong> ~500 m</p>
+                    <p><strong>Población:</strong> ~100 habitantes</p>
+                    <p><strong>Código postal:</strong> 26371</p>
+                </div>
+                
+                <h3>📑 Contenidos</h3>
+                <ul class="section-list">
+                    <li><a href="historia.html">📜 Historia del pueblo</a></li>
+                    <li><a href="patrimonio.html">⛪ Patrimonio religioso</a></li>
+                    <li><a href="personajes.html">👤 Personajes ilustres</a></li>
+                    <li><a href="documentos.html">📚 Fuentes documentales</a></li>
+                    <li><a href="genealogia.html">🌳 Registros genealógicos</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">🏷️ Categorías</h3>
+                <ul>
+                    <li><span class="tag">Siglo XVII</span></li>
+                    <li><span class="tag">Nobleza</span></li>
+                    <li><span class="tag">Patrimonio</span></li>
+                    <li><span class="tag">Capellanías</span></li>
+                    <li><span class="tag">Nueva España</span></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">📊 Estadísticas</h3>
+                <ul>
+                    <li>📄 2 documentos analizados</li>
+                    <li>👤 2 personajes documentados</li>
+                    <li>📅 1 partida de bautismo</li>
+                    <li>🖼️ 1 retrato identificado</li>
+                </ul>
+            </aside>
+            
+            <div class="content">
+                <h2>Bienvenido al Archivo Patrimonial</h2>
+                
+                <p>Este proyecto documenta la historia, el patrimonio y la memoria documental de <strong>Pedroso</strong>, 
+                un pequeño municipio de La Rioja con una rica herencia histórica que se remonta a la Baja Edad Media.</p>
+                
+                <div class="highlight-box">
+                    <strong>🎯 Objetivo:</strong> Crear un repositorio colaborativo de información histórica 
+                    sobre Pedroso, accesible para investigadores, genealogistas y vecinos interesados en 
+                    el patrimonio de su pueblo.
+                </div>
+                
+                <h3>🔍 Hallazgos Recientes</h3>
+                
+                <div class="person-card">
+                    <h4>Identificación del Capitán Don Juan de Villarreal Almarza y Moreno</h4>
+                    <div class="dates">Siglo XVII • Gobernador General de México</div>
+                    <p>Hidalgo pedrés, capitán de milicias y <strong>Gobernador General de México</strong> a finales 
+                    del siglo XVII. Fundador de capilla en la Iglesia de El Salvador de Pedroso. Su retrato 
+                    al óleo con inscripción original ha sido identificado recientemente.</p>
+                    <p style="margin-top: 0.5rem;">
+                        <span class="tag">Gobernador</span>
+                        <span class="tag">Nobleza</span>
+                        <span class="tag">Nueva España</span>
+                    </p>
+                </div>
+                
+                <div class="person-card">
+                    <h4>La Capilla de San Juan de Letrán</h4>
+                    <div class="dates">Siglo XVII • Iglesia de El Salvador</div>
+                    <p>Fundada por <strong>Juan de Pedroso</strong>, otro noble local distinto del Capitán Villarreal. 
+                    Este documento aclara la existencia de dos linajes nobiliarios en Pedroso durante el siglo XVII, 
+                    ambos fundadores de capellanías en la iglesia parroquial.</p>
+                    <p style="margin-top: 0.5rem;">
+                        <span class="tag">Capellanía</span>
+                        <span class="tag">Patrimonio</span>
+                        <span class="tag">Arquitectura</span>
+                    </p>
+                </div>
+                
+                <h3>📍 Líneas de investigación activas</h3>
+                <ul>
+                    <li><strong>Historia medieval:</strong> Orígenes del poblamiento (siglos XI-XV)</li>
+                    <li><strong>Élite local:</strong> Redes de poder y parentesco en la nobleza pedresa</li>
+                    <li><strong>Patronazgo religioso:</strong> Capellanías y fundaciones pías</li>
+                    <li><strong>Emigración a Indias:</strong> Conexiones con Nueva España</li>
+                    <li><strong>Genealogía:</strong> Familias Pérez, Rubio, Villarreal, Pedroso</li>
+                </ul>
+                
+                <h3>🤝 Colabora</h3>
+                <p>Este archivo es un trabajo en progreso. Si tienes documentos, fotografías o información 
+                sobre la historia de Pedroso, puedes contribuir a través de GitHub o contactando al autor.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Archivo Patrimonial Pedroso • Proyecto de investigación histórica • 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

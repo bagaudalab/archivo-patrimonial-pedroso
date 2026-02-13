@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes Ilustres - Archivo Patrimonial Pedroso</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f6f6f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        header {
+            background: #8B4513;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.9; font-style: italic; }
+        nav {
+            background: #6B3410;
+            padding: 1rem 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 2rem;
+            opacity: 0.9;
+        }
+        nav a:hover { opacity: 1; text-decoration: underline; }
+        main {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .sidebar {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            height: fit-content;
+            border: 1px solid #e0e0e0;
+        }
+        .sidebar h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #8B4513;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 0.6rem; }
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar a:hover { color: #8B4513; text-decoration: underline; }
+        .content h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #deb887;
+        }
+        .content h3 {
+            color: #6B3410;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .person-detail {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .person-detail h4 {
+            color: #8B4513;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .person-detail .subtitle {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .person-detail .section {
+            margin: 1rem 0;
+        }
+        .person-detail .section h5 {
+            color: #6B3410;
+            margin-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        .tag.secondary {
+            background: #666;
+        }
+        .notice {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        footer {
+            background: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            main { grid-template-columns: 1fr; }
+            nav a { display: block; margin-bottom: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ Archivo Patrimonial Pedroso</h1>
+            <p>La Rioja, España — Historia, patrimonio y memoria documental</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia</a>
+            <a href="patrimonio.html">Patrimonio</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="documentos.html">Documentos</a>
+            <a href="genealogia.html">Genealogía</a>
+        </nav>
+        
+        <main>
+            <aside class="sidebar">
+                <h3>👤 Personajes</h3>
+                <ul>
+                    <li><a href="#villarreal">Capitán Villarreal Almarza</a></li>
+                    <li><a href="#juan-pedroso">Juan de Pedroso</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">🏷️ Categorías</h3>
+                <ul>
+                    <li><span class="tag">Gobernador</span></li>
+                    <li><span class="tag">Nobleza</span></li>
+                    <li><span class="tag">Militar</span></li>
+                    <li><span class="tag">Siglo XVII</span></li>
+                </ul>
+            </aside>
+            
+            <div class="content">
+                <h2>Personajes Ilustres de Pedroso</h2>
+                
+                <p>Durante el siglo XVII, Pedroso fue el origen de varios personajes de la élite riojana 
+                que desempeñaron importantes roles tanto en la península como en el Imperio español en América.</p>
+                
+                <div class="notice">
+                    <strong>ℹ️ Nota importante:</strong> Los dos personajes documentados a continuación 
+                    <strong>NO son la misma persona</strong>, a pesar de compartir época y estatus social. 
+                    Ambos fundaron capillas distintas en la Iglesia de El Salvador.
+                </div>
+                
+                <div class="person-detail" id="villarreal">
+                    <h4>Capitán Don Juan de Villarreal Almarza y Moreno</h4>
+                    <div class="subtitle">Gobernador General de México • Capitán de Milicias • Hidalgo</div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <span class="tag">Gobernador</span>
+                        <span class="tag">Militar</span>
+                        <span class="tag">Nobleza</span>
+                        <span class="tag secondary">Siglo XVII</span>
+                    </div>
+                    
+                    <div class="section">
+                        <h5>📝 Biografía</h5>
+                        <p>Hidalgo originario de <strong>Pedroso, La Rioja</strong>, que alcanzó el rango de 
+                        <strong>Capitán de Milicias</strong> y posteriormente fue nombrado 
+                        <strong>Gobernador General de México</strong> a finales del siglo XVII.</p>
+                        <p>Su carrera ejemplifica la movilidad social de la nobleza provincial española hacia 
+                        las altas magistraturas del Imperio en América.</p>
+                    </div>
+                    
+                    <div class="section">
+                        <h5>⛪ Patronazgo religioso</h5>
+                        <p>Fundó una capilla en la <strong>Iglesia de El Salvador de Pedroso</strong>, 
+                        cerrada con <strong>rejería barroca</strong>. Este acto de patronazgo era habitual 
+                        entre los funcionarios del Imperio que retornaban a sus lugares de origen.</p>
+                    </div>
+                    
+                    <div class="section">
+                        <h5>🖼️ Documentación física</h5>
+                        <p>Se conserva un <strong>retrato al óleo</strong> del Capitán Villarreal con la 
+                        <strong>inscripción original visible</strong>, identificándolo con su título completo 
+                        y cargo de Gobernador.</p>
+                    </div>
+                    
+                    <div class="section">
+                        <h5>📚 Fuentes</h5>
+                        <ul>
+                            <li>Retrato al óleo con inscripción (colección privada)</li>
+                            <li>Rejería de la capilla fundada, Iglesia de El Salvador</li>
+                            <li>Archivos de Indias (posible documentación de su mandato)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="person-detail" id="juan-pedroso">
+                    <h4>Juan de Pedroso</h4>
+                    <div class="subtitle">Fundador de la Capilla de San Juan de Letrán • Noble local</div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <span class="tag">Patronazgo</span>
+                        <span class="tag">Nobleza</span>
+                        <span class="tag secondary">Siglo XVII</span>
+                    </div>
+                    
+                    <div class="section">
+                        <h5>📝 Biografía</h5>
+                        <p>Noble de Pedroso, <strong>distinto del Capitán Villarreal</strong>, que fundó la 
+                        <strong>Capilla de San Juan de Letrán</strong> en la Iglesia de El Salvador.</p>
+                        <p>Su existencia documenta que en Pedroso coexistían múltiples linajes de la élite 
+                        local durante el siglo XVII.</p>
+                    </div>
+                    
+                    <div class="section">
+                        <h5>⛪ Fundación</h5>
+                        <p>La <strong>Capilla de San Juan de Letrán</strong> constituye un ejemplo del 
+                        patronazgo religioso de la nobleza rural riojana. Esta capilla específica fue 
+                        fundada por Juan de Pedroso, creando confusión histórica con la del Capitán Villarreal.</p>
+                    </div>
+                    
+                    <div class="section">
+                        <h5>📚 Fuentes</h5>
+                        <ul>
+                            <li>Artículo académico: "Juan de Pedroso y la Fundación de la Capilla de San Juan de Letrán" (Dialnet)</li>
+                            <li>Documentación eclesiástica de la Iglesia de El Salvador</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>🔄 Investigación en curso</h3>
+                <p>Se están investigando las posibles conexiones familiares entre estos personajes y otras 
+                familias de la élite riojana del siglo XVII, incluyendo líneas genealogicas documentadas 
+                en partidas de bautismo de la época.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Archivo Patrimonial Pedroso • Proyecto de investigación histórica • 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos - Archivo Patrimonial Pedroso</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f6f6f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        header {
+            background: #8B4513;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.9; font-style: italic; }
+        nav {
+            background: #6B3410;
+            padding: 1rem 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 2rem;
+            opacity: 0.9;
+        }
+        nav a:hover { opacity: 1; text-decoration: underline; }
+        main {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .sidebar {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            height: fit-content;
+            border: 1px solid #e0e0e0;
+        }
+        .sidebar h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #8B4513;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 0.6rem; }
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar a:hover { color: #8B4513; text-decoration: underline; }
+        .content h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #deb887;
+        }
+        .content h3 {
+            color: #6B3410;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .doc-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .doc-card h4 {
+            color: #8B4513;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .doc-card .meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .doc-card .description {
+            margin: 1rem 0;
+        }
+        .doc-card .links {
+            margin-top: 1rem;
+        }
+        .doc-card a.button {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .doc-card a.button:hover {
+            background: #6B3410;
+        }
+        .tag {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        .tag.secondary {
+            background: #666;
+        }
+        footer {
+            background: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            main { grid-template-columns: 1fr; }
+            nav a { display: block; margin-bottom: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ Archivo Patrimonial Pedroso</h1>
+            <p>La Rioja, España — Historia, patrimonio y memoria documental</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia</a>
+            <a href="patrimonio.html">Patrimonio</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="documentos.html">Documentos</a>
+            <a href="genealogia.html">Genealogía</a>
+        </nav>
+        
+        <main>
+            <aside class="sidebar">
+                <h3>📚 Documentos</h3>
+                <ul>
+                    <li><a href="#historia-pedroso">Historia de Pedroso</a></li>
+                    <li><a href="#capilla-san-juan">Capilla San Juan de Letrán</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">🏷️ Tipos</h3>
+                <ul>
+                    <li><span class="tag">PDF</span></li>
+                    <li><span class="tag">Académico</span></li>
+                    <li><span class="tag">Monografía</span></li>
+                    <li><span class="tag">Artículo</span></li>
+                </ul>
+            </aside>
+            
+            <div class="content">
+                <h2>Fuentes Documentales</h2>
+                
+                <p>Este archivo recopila documentación historiográfica sobre Pedroso, incluyendo 
+                monografías locales, artículos académicos y registros genealógicos.</p>
+                
+                <h3>📖 Monografías</h3>
+                
+                <div class="doc-card" id="historia-pedroso">
+                    <h4>Historia de Pedroso</h4>
+                    <div class="meta">
+                        Autor: Fernando Luis Alonso Torrecilla • Formato: PDF
+                    </div>
+                    <div>
+                        <span class="tag">Monografía</span>
+                        <span class="tag secondary">PDF</span>
+                        <span class="tag secondary">Historia local</span>
+                    </div>
+                    <div class="description">
+                        <p>Monografía completa sobre la historia de Pedroso desde la Baja Edad Media 
+                        (siglos XI-XV) hasta épocas posteriores. Incluye información sobre:</p>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li>Orígenes del poblamiento</li>
+                            <li>Evolución histórica del municipio</li>
+                            <li>Contexto histórico-social de la época</li>
+                            <li>Possibles menciones a familias nobles y fundaciones de capillas</li>
+                        </ul>
+                    </div>
+                    <div class="links">
+                        <span style="color: #666; font-size: 0.9rem;">📁 Archivo: <code>documentos/historia-de-pedroso.pdf</code></span>
+                    </div>
+                </div>
+                
+                <h3>📄 Artículos académicos</h3>
+                
+                <div class="doc-card" id="capilla-san-juan">
+                    <h4>Juan de Pedroso y la Fundación de la Capilla de San Juan de Letrán</h4>
+                    <div class="meta">
+                        Fuente: Dialnet • Formato: PDF (artículo académico)
+                    </div>
+                    <div>
+                        <span class="tag">Artículo</span>
+                        <span class="tag secondary">Académico</span>
+                        <span class="tag secondary">Patrimonio</span>
+                    </div>
+                    <div class="description">
+                        <p>Artículo académico que documenta la fundación de la Capilla de San Juan de Letrán 
+                        en la Iglesia de El Salvador de Pedroso por parte de <strong>Juan de Pedroso</strong>.</p>
+                        <p style="margin-top: 0.5rem;"><strong>Importancia:</strong> Este documento demuestra que 
+                        existían <strong>dos nobles distintos</strong> en Pedroso durante el siglo XVII:</p>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li><strong>Juan de Pedroso</strong> — Fundador de la Capilla de San Juan de Letrán</li>
+                            <li><strong>Capitán Villarreal Almarza</strong> — Fundador de otra capilla distinta, Gobernador de México</li>
+                        </ul>
+                    </div>
+                    <div class="links">
+                        <span style="color: #666; font-size: 0.9rem;">📁 Archivo: <code>documentos/juan-de-pedroso-capilla-san-juan-letran.pdf</code></span>
+                    </div>
+                </div>
+                
+                <h3>🖼️ Documentación visual</h3>
+                
+                <div class="doc-card">
+                    <h4>Partida de Bautismo (1677)</h4>
+                    <div class="meta">
+                        Tipo: Documento eclesiástico • Formato: Imagen (JPG)
+                    </div>
+                    <div>
+                        <span class="tag">Genealogía</span>
+                        <span class="tag secondary">Siglo XVII</span>
+                    </div>
+                    <div class="description">
+                        <p>Partida de bautismo de <strong>Francisco Antonio Pérez Rubio</strong>, 
+                        bautizado el 28 de abril de 1677 en Pedroso. Documento clave para la genealogía 
+                        de las familias Pérez y Rubio en La Rioja.</p>
+                    </div>
+                    <div class="links">
+                        <span style="color: #666; font-size: 0.9rem;">📁 Archivo: <code>documentos/partida-1677-perez.jpg</code></span>
+                    </div>
+                </div>
+                
+                <div class="doc-card">
+                    <h4>Retrato al óleo del Capitán Villarreal</h4>
+                    <div class="meta">
+                        Tipo: Arte • Siglo XVII • Colección privada
+                    </div>
+                    <div>
+                        <span class="tag">Arte</span>
+                        <span class="tag secondary">Retrato</span>
+                        <span class="tag secondary">Nobleza</span>
+                    </div>
+                    <div class="description">
+                        <p>Retrato al óleo del <strong>Capitán Don Juan de Villarreal Almarza y Moreno</strong>, 
+                        con <strong>inscripción original visible</strong> que identifica su condición de 
+                        Gobernador General de México. Pieza clave para la identificación histórica de este 
+                        personaje.</p>
+                    </div>
+                    <div class="links">
+                        <span style="color: #666; font-size: 0.9rem;">📁 Colección privada — consultar para acceso</span>
+                    </div>
+                </div>
+                
+                <h3>📍 Repositorio de archivos</h3>
+                <p>Los documentos originales se encuentran en el repositorio GitHub del proyecto:</p>
+                <p><code>https://github.com/bagaudalab/archivo-patrimonial-pedroso/tree/main/documentos</code></p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Archivo Patrimonial Pedroso • Proyecto de investigación histórica • 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

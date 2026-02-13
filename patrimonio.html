@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrimonio - Archivo Patrimonial Pedroso</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f6f6f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        header {
+            background: #8B4513;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.9; font-style: italic; }
+        nav {
+            background: #6B3410;
+            padding: 1rem 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 2rem;
+            opacity: 0.9;
+        }
+        nav a:hover { opacity: 1; text-decoration: underline; }
+        main {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .sidebar {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            height: fit-content;
+            border: 1px solid #e0e0e0;
+        }
+        .sidebar h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #8B4513;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 0.6rem; }
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar a:hover { color: #8B4513; text-decoration: underline; }
+        .content h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #deb887;
+        }
+        .content h3 {
+            color: #6B3410;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .heritage-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .heritage-card h4 {
+            color: #8B4513;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .heritage-card .type {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .heritage-card .description {
+            margin: 1rem 0;
+        }
+        .tag {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        .tag.secondary {
+            background: #666;
+        }
+        footer {
+            background: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            main { grid-template-columns: 1fr; }
+            nav a { display: block; margin-bottom: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ Archivo Patrimonial Pedroso</h1>
+            <p>La Rioja, España — Historia, patrimonio y memoria documental</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia</a>
+            <a href="patrimonio.html">Patrimonio</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="documentos.html">Documentos</a>
+            <a href="genealogia.html">Genealogía</a>
+        </nav>
+        
+        <main>
+            <aside class="sidebar">
+                <h3>⛪ Patrimonio</h3>
+                <ul>
+                    <li><a href="#iglesia">Iglesia de El Salvador</a></li>
+                    <li><a href="#capillas">Capillas</a></li>
+                    <li><a href="#rejeria">Rejerías</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">🏷️ Tipos</h3>
+                <ul>
+                    <li><span class="tag">Religioso</span></li>
+                    <li><span class="tag">Barroco</span></li>
+                    <li><span class="tag">Siglo XVII</span></li>
+                </ul>
+            </aside>
+            
+            <div class="content">
+                <h2>Patrimonio de Pedroso</h2>
+                
+                <p>Pedroso conserva un valioso patrimonio histórico-artístico, especialmente vinculado 
+                a la arquitectura religiosa y a las fundaciones de la élite local durante el siglo XVII.</p>
+                
+                <h3>⛪ Patrimonio religioso</h3>
+                
+                <div class="heritage-card" id="iglesia">
+                    <h4>Iglesia de El Salvador</h4>
+                    <div class="type">Templo parroquial • Arquitectura religiosa</div>
+                    <div>
+                        <span class="tag">Religioso</span>
+                        <span class="tag secondary">Parroquia</span>
+                    </div>
+                    <div class="description">
+                        <p>Iglesia parroquial de Pedroso, sede de dos importantes capellanías fundadas 
+                        por la nobleza local en el siglo XVII.</p>
+                    </div>
+                </div>
+                
+                <div class="heritage-card" id="capillas">
+                    <h4>Capilla del Capitán Villarreal</h4>
+                    <div class="type">Capilla funeraria • Siglo XVII</div>
+                    <div>
+                        <span class="tag">Capellanía</span>
+                        <span class="tag secondary">Patronazgo</span>
+                        <span class="tag secondary">Nobleza</span>
+                    </div>
+                    <div class="description">
+                        <p>Capilla fundada por el <strong>Capitán Don Juan de Villarreal Almarza y Moreno</strong>, 
+                        Gobernador General de México. Cerrada con <strong>rejería barroca</strong>, constituye 
+                        un ejemplo del patronazgo religioso de la alta función imperial.</p>
+                        <p style="margin-top: 0.5rem;"><strong>Fundador:</strong> Capitán Don Juan de Villarreal Almarza y Moreno</p>
+                    </div>
+                </div>
+                
+                <div class="heritage-card">
+                    <h4>Capilla de San Juan de Letrán</h4>
+                    <div class="type">Capilla funeraria • Siglo XVII</div>
+                    <div>
+                        <span class="tag">Capellanía</span>
+                        <span class="tag secondary">Patronazgo</span>
+                    </div>
+                    <div class="description">
+                        <p>Capilla fundada por <strong>Juan de Pedroso</strong>, distinta del Capitán Villarreal. 
+                        Documenta la existencia de múltiples linajes nobiliarios en Pedroso durante el siglo XVII.</p>
+                        <p style="margin-top: 0.5rem;"><strong>Fundador:</strong> Juan de Pedroso</p>
+                    </div>
+                </div>
+                
+                <h3 id="rejeria">🎨 Rejerías</h3>
+                
+                <div class="heritage-card">
+                    <h4>Rejería de la capilla Villarreal</h4>
+                    <div class="type">Hierro forjado • Barroco • Siglo XVII</div>
+                    <div>
+                        <span class="tag">Herrería</span>
+                        <span class="tag secondary">Barroco</span>
+                    </div>
+                    <div class="description">
+                        <p>Rejería barroca que cierra la capilla fundada por el Capitán Villarreal. 
+                        Ejemplo de la artesanía del hierro de la época, destinada a proteger y 
+                        distinguir los espacios funerarios de la élite.</p>
+                    </div>
+                </div>
+                
+                <h3>📍 Estado de conservación</h3>
+                <p>El patrimonio de Pedroso se encuentra en diversos estados de conservación. 
+                Se recomienda contactar con la parroquia para visitas y consultas sobre el estado 
+                actual de las capillas y rejerías.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Archivo Patrimonial Pedroso • Proyecto de investigación histórica • 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

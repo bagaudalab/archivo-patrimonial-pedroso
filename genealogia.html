@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genealogía - Archivo Patrimonial Pedroso</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f6f6f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        header {
+            background: #8B4513;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.9; font-style: italic; }
+        nav {
+            background: #6B3410;
+            padding: 1rem 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 2rem;
+            opacity: 0.9;
+        }
+        nav a:hover { opacity: 1; text-decoration: underline; }
+        main {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .sidebar {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            height: fit-content;
+            border: 1px solid #e0e0e0;
+        }
+        .sidebar h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #8B4513;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 0.6rem; }
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar a:hover { color: #8B4513; text-decoration: underline; }
+        .content h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #deb887;
+        }
+        .content h3 {
+            color: #6B3410;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .record-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .record-card h4 {
+            color: #8B4513;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .record-field {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .record-field:last-child { border-bottom: none; }
+        .record-field .label {
+            font-weight: 600;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .record-field .value {
+            color: #333;
+        }
+        .highlight {
+            background: #fff8dc;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+        .tag {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        .tree-node {
+            background: #f8f9fa;
+            border-left: 3px solid #8B4513;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .tree-node h5 {
+            color: #6B3410;
+            margin-bottom: 0.5rem;
+        }
+        .connection-line {
+            width: 2px;
+            height: 20px;
+            background: #ddd;
+            margin-left: 1rem;
+        }
+        footer {
+            background: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            main { grid-template-columns: 1fr; }
+            nav a { display: block; margin-bottom: 0.5rem; }
+            .record-field { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ Archivo Patrimonial Pedroso</h1>
+            <p>La Rioja, España — Historia, patrimonio y memoria documental</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia</a>
+            <a href="patrimonio.html">Patrimonio</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="documentos.html">Documentos</a>
+            <a href="genealogia.html">Genealogía</a>
+        </nav>
+        
+        <main>
+            <aside class="sidebar">
+                <h3>🌳 Registros</h3>
+                <ul>
+                    <li><a href="#perez-rubio">Pérez Rubio (1677)</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">📍 Lugares</h3>
+                <ul>
+                    <li><a href="#">Pedroso</a></li>
+                    <li><a href="#">Ledesma de la Cogolla</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">🏷️ Familias</h3>
+                <ul>
+                    <li><span class="tag">Pérez</span></li>
+                    <li><span class="tag">Rubio</span></li>
+                    <li><span class="tag">Villarreal</span></li>
+                    <li><span class="tag">Pedroso</span></li>
+                </ul>
+            </aside>
+            
+            <div class="content">
+                <h2>Registros Genealógicos</h2>
+                
+                <p>Esta sección recopila documentación genealógica de familias originarias o vinculadas 
+                a Pedroso. Los registros incluyen partidas sacramentales, testamentos y otros documentos 
+                de archivo.</p>
+                
+                <h3>📜 Partidas de Bautismo</h3>
+                
+                <div class="record-card" id="perez-rubio">
+                    <h4>Francisco Antonio Pérez Rubio</h4>
+                    
+                    <div style="margin-bottom: 1rem;">
+                        <span class="tag">Bautismo</span>
+                        <span class="tag">1677</span>
+                        <span class="tag">Pedroso</span>
+                    </div>
+                    
+                    <div class="record-field">
+                        <span class="label">Fecha:</span>
+                        <span class="value highlight">28 de abril de 1677</span>
+                    </div>
+                    
+                    <div class="record-field">
+                        <span class="label">Lugar:</span>
+                        <span class="value"><strong>Pedroso</strong>, La Rioja</span>
+                    </div>
+                    
+                    <div class="record-field">
+                        <span class="label">Bautizado:</span>
+                        <span class="value"><strong>Francisco Antonio Pérez Rubio</strong></span>
+                    </div>
+                    
+                    <div class="record-field">
+                        <span class="label">Padre:</span>
+                        <span class="value">José / Joseph Pérez (hijo de Esteban)</span>
+                    </div>
+                    
+                    <div class="record-field">
+                        <span class="label">Madre:</span>
+                        <span class="value">María Rubio (hija de Antonio)</span>
+                    </div>
+                    
+                    <div class="record-field">
+                        <span class="label">Abuelo paterno:</span>
+                        <span class="value"><strong>Esteban Pérez</strong> — vecino de <strong>Ledesma de la Cogolla</strong> (La Rioja)</span>
+                    </div>
+                    
+                    <div class="record-field">
+                        <span class="label">Abuela paterna:</span>
+                        <span class="value">Madalena de Pedroso</span>
+                    </div>
+                    
+                    <div class="record-field">
+                        <span class="label">Abuelo materno:</span>
+                        <span class="value">Antonio Rubio</span>
+                    </div>
+                    
+                    <div class="record-field">
+                        <span class="label">Cura:</span>
+                        <span class="value"><strong>Bernardo Rubio</strong> (firma el documento)</span>
+                    </div>
+                </div>
+                
+                <h3>🌳 Línea genealógica Pérez</h3>
+                
+                <div class="tree-node">
+                    <h5>Generación I</h5>
+                    <p><strong>Esteban Pérez</strong> (vecino de Ledesma de la Cogolla) + Madalena de Pedroso</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                        Origen geográfico: Ledesma de la Cogolla (La Rioja)
+                    </p>
+                </div>
+                
+                <div class="connection-line"></div>
+                
+                <div class="tree-node">
+                    <h5>Generación II</h5>
+                    <p><strong>José / Joseph Pérez</strong> (hijo de Esteban) + María Rubio (hija de Antonio)</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                        Residencia: Pedroso (La Rioja)
+                    </p>
+                </div>
+                
+                <div class="connection-line"></div>
+                
+                <div class="tree-node" style="background: #fff8dc; border-left-color: #d4a017;">
+                    <h5>Generación III</h5>
+                    <p><strong>Francisco Antonio Pérez Rubio</strong> — bautizado 28 de abril de 1677 en Pedroso</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                        Primera generación documentada con partida de bautismo
+                    </p>
+                </div>
+                
+                <h3>📍 Conexiones geográficas</h3>
+                <ul>
+                    <li><strong>Ledesma de la Cogolla</strong> → Origen de la línea Pérez (abuelo Esteban)</li>
+                    <li><strong>Pedroso</strong> → Residencia de José Pérez y lugar de bautismo de Francisco Antonio</li>
+                    <li><strong>Línea Rubio</strong> → Presente en ambos lugares (madre María Rubio, cura Bernardo Rubio)</li>
+                </ul>
+                
+                <h3>🔍 Notas de investigación</h3>
+                <ul>
+                    <li>El apellido <strong>Rubio</strong> aparece tanto en la línea materna como en el cargo eclesiástico (Cura Bernardo Rubio), sugiriendo posibles vínculos familiares con el clero local.</li>
+                    <li>La presencia de <strong>"Pedroso"</strong> como segundo apellido de la abuela paterna (Madalena de Pedroso) indica uniones con familias del propio pueblo.</li>
+                    <li>El traslado de <strong>Ledesma de la Cogolla</strong> a <strong>Pedroso</strong> entre la generación I y II sugiere movilidad geográfica dentro de la comarca.</li>
+                </ul>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Archivo Patrimonial Pedroso • Proyecto de investigación histórica • 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
